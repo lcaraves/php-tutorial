@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Formulario Cliente</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Boostrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<!-- java Script de Bootstrap -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+	</head>
+<body>
+	<div class="container">
+		<nav class="navbar navbar-default">
+	        <div class="container-fluid">
+	          <div class="navbar-header">
+	                     
+	          </div>
+	          <div id="navbar" class="navbar-collapse collapse">	            
+	            <ul class="nav navbar-nav">
+	          		<li class="active">
+	          			<a href="#">Home</a>
+	          		</li>
+	          		<li role="presentation">
+	          			<a href="#">Quienes Somos</a>
+	          		</li>
+	          		<li role="presentation">
+	          			<a href="#">Galeria</a>
+	          		</li>
+	          	</ul>
+	          </div><!--/.nav-collapse -->
+	        </div><!--/.container-fluid -->
+	    </nav>
+	    <div>
+	    	<h2>Alamcenar Imagenes</h2>
+	    	<form action="../php/insert-imagen.php" method="post" class="form-horizontal col-xs-4">
+	    		<div class="form-group">
+	    			<label for="" class="form-label">Ingresar Imagen</label>
+	    			<input type="file" name="imagen">
+	    		</div>
+	    		<div class="form-group">
+	    			<label for="" class="form-label">Descripción</label>
+	    			<textarea name="descripcion" id="" cols="10" rows="5" class="form-control"></textarea>
+	    		</div>
+	    		<div class="form-group">
+	    			<input type="submit" class="btn btn-danger" value="Agregar">
+	    		</div>
+	    	</form>
+	    </div> <!--/.div-form -->
+    </div>
+</body>
+</html>

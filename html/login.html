@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Login</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Boostrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<link href="./Signin Template for Bootstrap_files/signin.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="container">
+		<div class="panel panel-info col-xs-10 col-md-offset-1 well">
+			<div class="panel-heading text-center">
+				<h2>Inicia sesión para acceder</h2>
+			</div>
+			<div class="panel-body">
+				<fieldset class="col-md-offset-4">
+					<form method="GET" action="../php/login.php" class="col-xs-6">
+					  <div class="form-group">
+					    <label for="">Dirección de Correo</label>
+					    <input type="email" class="form-control" placeholder="ejemplo@ejemplo.com" name="email" required>
+					  </div>
+					  <div class="form-group">
+					    <label for="">Contraseña</label>
+					    <input type="password" class="form-control" placeholder="Contraseña" name="password" required>
+					  </div>
+					  	<button type="submit" class="btn btn-primary">Ingresar</button>
+						<a href="registrarse.html" class="btn btn-link">Registrarse</a>
+					</form>
+				</fieldset>
+	    	</div><!-- /panel-body -->
+    	</div><!-- /panel -->
+	</div> <!-- /container -->
+</body>
+</html>
