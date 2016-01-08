@@ -232,22 +232,27 @@
     </footer>
 	<!-- Script de ALTA de Cliente -->
 	<script>
-	$("#form-alta").submit(function(e) {
+		$(document).ready(function() {
+			//Alta de Formulario
+			$("#form-alta").submit(function(e) {
 
-    var url = "php/formularioCliente.php"; // the script where you handle the form input.
+		   		var url = "php/formularioCliente.php"; // the script where you handle the form input.
 
-    $.ajax({
-           type: "POST",
-           url: url,
-           data: $("#form-alta").serialize(), // serializes the form's elements.
-           success: function(data)
-           {
-               alert(data); // show response from the php script.
-           }
-         });
+			    $.ajax({
+			           type: "POST",
+			           url: url,
+			           data: $("#form-alta").serialize(), // serializes the form's elements.
+			           success: function(data)
+			           {
+			               alert(data); // show response from the php script.
+			               $("#form-alta")[0].reset();
+			           }
+			         });
 
-    e.preventDefault(); // avoid to execute the actual submit of the form.
-	});
+		    	e.preventDefault(); // avoid to execute the actual submit of the form.
+			});
+
+		});
 	</script>
    </body>
 </html>

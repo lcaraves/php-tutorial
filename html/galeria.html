@@ -21,7 +21,7 @@
 	          <div id="navbar" class="navbar-collapse collapse">	            
 	            <ul class="nav navbar-nav">
 	          		<li class="active">
-	          			<a href="#">Home</a>
+	          			<a href="../index.php">Home</a>
 	          		</li>
 	          		<li role="presentation">
 	          			<a href="#">Quienes Somos</a>
@@ -33,22 +33,49 @@
 	          </div><!--/.nav-collapse -->
 	        </div><!--/.container-fluid -->
 	    </nav>
-	    <div>
-	    	<h2>Alamcenar Imagenes</h2>
-	    	<form action="../php/insert-imagen.php" method="post" class="form-horizontal col-xs-4">
-	    		<div class="form-group">
-	    			<label for="" class="form-label">Ingresar Imagen</label>
-	    			<input type="file" name="imagen">
+	    <div class="col-md-8">
+	    	<div class="btn btn-link">
+		    	<span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+		    	<a href="#" id="agregar">Agregar Imagen</a>
+	    	</div>
+	    	<div class="panel panel-info col-md-offset-4" id="form-imagen">
+	    		<div class="panel-heading">
+					<h2>Almacenar Imagenes</h2>
 	    		</div>
-	    		<div class="form-group">
-	    			<label for="" class="form-label">Descripción</label>
-	    			<textarea name="descripcion" id="" cols="10" rows="5" class="form-control"></textarea>
-	    		</div>
-	    		<div class="form-group">
-	    			<input type="submit" class="btn btn-danger" value="Agregar">
-	    		</div>
-	    	</form>
+		    	<div class="panel-body">
+	    	    	<form action="../php/insert-imagen.php" method="post" class="form-horizontal col-md-6">
+			    		<div class="form-group">
+			    			<label for="" class="form-label">Ingresar Imagen</label>
+			    			<input type="file" name="imagen">
+			    		</div>
+			    		<div class="form-group">
+			    			<label for="" class="form-label">Descripción</label>
+			    			<textarea name="descripcion" id="" cols="20" rows="5" class="form-control"></textarea>
+			    		</div>
+			    		<div class="form-group">
+			    			<input type="submit" class="btn btn-danger" value="Agregar">
+			    		</div>
+			    	</form>
+		    	</div><!-- Panel body -->
+	    	</div> <!-- Panel -->
 	    </div> <!--/.div-form -->
     </div>
 </body>
+<script>
+		$(document).ready(function() {
+			//
+			$("#form-imagen").hide();
+			$("#agregar").click(function() {
+				// body...
+				$("#form-imagen").slideDown();
+				
+			})
+			$("#agregar").dblclick(function() {
+				// body...
+				$("#form-imagen").slideUp();
+				
+			})
+			
+		})
+	</script>
 </html>
